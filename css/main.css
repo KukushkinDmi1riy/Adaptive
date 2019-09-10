@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700&display=swap&subset=cyrillic');
+
+
+
+
+@keyframes move {
+from
+  {
+    top:17px;
+    right: 15px;
+  }
+to
+  {
+    top:17px;
+    right: 10px;
+  }
+
+}
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body{
+  background-color: #fafafa;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+a,i{
+  text-decoration: none;
+  transition: color 0.6s ease;
+
+}
+img{
+    max-width: 100%;
+}
+
+header{
+  width: 90%;
+  padding: 20px 5%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > .logo{
+  font-size: 25px;
+  font-weight: 700;
+
+}
+
+header > .nav {
+  position: relative;
+  left: -5%;
+}
+
+nav > a{
+  margin-right: 40px;
+  display: inline-block;
+  color: #a3a3a3;
+}
+
+nav > a:hover,
+header> .menu:hover{
+  color:#4f4e4e;
+}
+
+header> .menu{
+  cursor:pointer;
+  color: #a3a3a3;
+  font-size: 23px;
+}
+
+
+.fixed{   /*class added after scroll */
+  position: fixed;
+  top:0;
+  left:0;
+  border-bottom: 2px solid silver;
+z-index: 10;
+}
+
+#hidden-menu{
+  width: 300px;
+  position: fixed;
+  top:0;
+  right: -300px;
+  height: 100vh;
+  background: #fff;
+  z-index:11;
+  text-align: center;
+}
+
+#hidden-menu .close{
+  font-size: 40px;
+  float: right;
+  margin-right:20px;
+  cursor:pointer;
+  transition: color 600ms ease;
+}
+
+#hidden-menu .close:hover{
+  color:#ccc;
+}
+
+
+#hidden-menu h2{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+#hidden-menu ul{
+list-style-type: none;
+}
+
+#hidden-menu ul li{
+  display: block;
+  margin-top: 15px;
+}
+
+#hidden-menu ul li a{color:#333;}
+#hidden-menu ul li a:hover{color:#ccc;}
+
+.full-page{
+  height: 95vh;
+  background:url('../img/main-bg.jpg') no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #3b3b3b;
+  text-align: center;
+  color: #fff;
+}
+.full-page>h1{
+  padding-top: 250px;
+  font-size: 45px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+
+.full-page>h3{
+  margin: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.full-page>button,
+.bg-fixed>button{
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 14px;
+  cursor: pointer;
+  background: #ffc107;
+  color: #704404;
+  font-weight: 500;
+  position: relative;
+  min-width: 160px;
+  transition: background 0.6s ease;
+}
+
+.full-page>button:hover,
+.bg-fixed>button:hover{
+  background: #ff9800;
+}
+
+.full-page>button i,
+.bg-fixed>button i{
+  transition: margin 0.6s ease;
+  margin-left: 8px;
+  position: absolute;
+  top:17px;
+  right: 15px;
+}
+
+.full-page>button:hover i,
+.bg-fixed>button:hover i{
+  margin-left: 15px;
+  animation: move 1s infinite ease;
+  color:#fff;
+}
+
+.features{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+
+}
+
+.features>div{
+  width: 200px;
+  text-align: center;
+  margin: 50px 10px;
+}
+ .features>div img{
+   width: 100px;
+   margin-bottom: 50px;
+ }
+
+.features>div h4{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #454545;
+}
+
+.features>div p{
+    font-weight: 200;
+}
+
+.gallery{
+  width: 70%;
+  margin: 50px 15%;
+  position: relative;
+  left:100px;
+
+}
+.gallery div {
+          /* создавал для карусели */
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.gallery .images{
+  min-height:200px;
+  max-height:300px;
+}
+
+.gallery .image1{
+  background: url("https://cdn.imza.com/indirv2/n/800x480/apple-macbooklar-icin-kendi-islemcisini-uretiyor-12552.jpg") no-repeat;
+
+background-size: cover;
+/* width: 22%; */
+
+}
+.gallery .image2{
+  background: url("https://pbs.twimg.com/media/COCnH47UAAEuNUZ.jpg") no-repeat;
+background-size: cover;
+/* width: 22%; */
+}
+.gallery .image3{
+  background: url("http://analogindex.ru/image/549366/1024x1024/15.jpeg") no-repeat;
+background-size: cover;
+/* width: 22%; */
+}
+.gallery .image4{
+  background: url("https://img.tamindir.com/resize/640x360/ti_e_ul/ezgimen/h/apple-watch-ve-rakipler-karsilastirma-b_640x360.jpg") no-repeat;
+background-size: cover;
+/* width: 22%; */
+}
+.gallery .image5{
+  background: url("http://www.stevesonian.com/museum/iPod/nano_gen3/design/iPod_nano_gen3_unboxing_e.jpg") no-repeat;
+background-size: cover;
+/* width: 22%; */
+}
+
+
+
+
+.gallery .slick-prev,
+.gallery .slick-next{
+  font-size: 28px;
+  position: absolute;
+  top:50%;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  /* background-color: #444;
+  border-radius: 50%;
+  color: black; */
+}
+
+.gallery .slick-prev:hover,
+.gallery .slick-next:hover{
+  transform: scale(1.2);
+}
+
+.gallery .slick-prev{
+  left:-60px;
+
+}
+
+.gallery .slick-next{
+    right: 40px;
+}
+/*
+.slick-dots{
+  display: flex;
+  position: absolute;
+  left:40%;
+}
+
+.slick-dots li{
+    /* list-style-type: none; */
+  /* margin: 5px;
+}
+.slick-active{
+  background-color: red;
+} */
+
+.bg-fixed{
+  height: 300px;
+  background:url('../img/bg-fixed.jpg') no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #3b3b3b;
+  text-align: center;
+  color: #fff;
+}
+
+.bg-fixed>h3{
+  font-size: 27px;
+  padding-top: 100px;
+  margin-bottom: 20px;
+}
+.bg-fixed input{
+  padding: 14px 20px;
+  width: 250px;
+  border: 0;
+  border-radius: 5px;
+  background: #fafafa;
+}
+
+footer{
+  width: 90%;
+  padding: 50px 5%;
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+}
+
+footer .up-btn,
+footer .social div{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #eee;
+  border: 1px solid silver;
+  cursor: pointer;
+  color: #3b3b3b;
+  transition: transform 0.6s ease;
+}
+footer .up-btn:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+}
+footer .social div{
+  display: inline-block;
+  margin-left: 16px;
+}
